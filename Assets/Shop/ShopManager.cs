@@ -7,6 +7,7 @@ public class ShopManager : MonoBehaviour
     public ShopItemSO[] shopItems;           // Maðaza item'larý
     public Transform[] toolDisplaySlots;     // Tezgahtaki 3 pozisyon (slot)
     public TextMeshProUGUI[] priceTexts;     // Fiyat yazýlarý
+    public int[] prices;
     public Button[] purchaseButtons;         // Satýn alma butonlarý
 
     public Transform toolSpawnPoint;         // Satýn alýnan tool'un spawn olacaðý yer
@@ -23,7 +24,7 @@ public class ShopManager : MonoBehaviour
             var item = shopItems[i];
 
             // Tool'u tezgahtaki slot'a yerleþtir
-            Instantiate(item.toolPrefab, toolDisplaySlots[i].position, Quaternion.identity);
+            //Instantiate(item.toolPrefab, toolDisplaySlots[i].position, Quaternion.identity);
 
             // Fiyatlarý yazdýr
             priceTexts[i].text = $"{item.price} Coins";
@@ -31,11 +32,21 @@ public class ShopManager : MonoBehaviour
             // Butona týklanma olayýný ekle
             int index = i; // Lambda expression için
             purchaseButtons[i].onClick.AddListener(() => PurchaseItem(index));
+            purchaseButtons[i].onClick.AddListener(() => Debug.Log($"{index}: BUTTON PRESSED"));
         }
     }
 
     void PurchaseItem(int index)
     {
+        Debug.Log("XDDDD " + index);
+
+        if (!PlayerStats.Instance.CheckCanPay(prices[index]))
+        {
+            return;
+        }
+
+        PlayerStats.Instance.SpendCoins(prices[index]);
+
         var item = shopItems[index];
 
         // Fiyatý SOLD yap
@@ -43,6 +54,8 @@ public class ShopManager : MonoBehaviour
 
         // Butonu devre dýþý býrak
         purchaseButtons[index].interactable = false;
+
+        FindObjectsByType<BagSystem>(FindObjectsSortMode.None);
 
         // Tool'u oyuncunun önüne spawnla
         Instantiate(item.toolPrefab, toolSpawnPoint.position, Quaternion.identity);

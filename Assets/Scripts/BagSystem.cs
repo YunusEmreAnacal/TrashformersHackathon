@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SpawnManager : MonoBehaviour
+public class BagSystem : MonoBehaviour
 {
     public GameObject[] models; // Spawnlanacak modeller
     public Transform spawnPoint; // Modellerin spawnlanacaðý nokta

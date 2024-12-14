@@ -8,7 +8,6 @@ public class TrashCollectingProjectile : MonoBehaviour
     [SerializeField] private float lifetime = 5f;
     [SerializeField] private LayerMask trashLayer;
     [SerializeField] private LayerMask floorLayer;
-    [SerializeField] private float pullForce = 15f;
     [SerializeField] private float collectionSpeed = 5f;
 
     [Header("Effects")]
@@ -46,15 +45,15 @@ public class TrashCollectingProjectile : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if ((floorLayer.value & (1 << collision.gameObject.layer)) != 0)
-        {            
+        if ((floorLayer.value & (1 << other.gameObject.layer)) != 0)
+        {
             StopAllCoroutines();
             Destroy(gameObject);
         }
 
-        Debug.Log($"{collision.gameObject.layer} --- {floorLayer.value}");
+        Debug.Log($"{other.gameObject.layer} --- {floorLayer.value}");
 
         if (!isCollecting)
         {

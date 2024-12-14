@@ -93,19 +93,21 @@ public class VacuumCleanerController : MonoBehaviour
         if (collectedTrash.Contains(trash))
             return;
 
-        Rigidbody trashRb = trash.GetComponent<Rigidbody>();
-        Collider trashCollider = trash.GetComponent<Collider>();
+        Destroy(trash);
 
-        // Disable physics and collision
-        trashRb.isKinematic = true;
-        trashCollider.enabled = false;
+        //Rigidbody trashRb = trash.GetComponent<Rigidbody>();
+        //Collider trashCollider = trash.GetComponent<Collider>();
 
-        // Store the trash in the container
-        trash.transform.SetParent(collectionContainer);
-        trash.transform.localScale *= 0.5f; // Optional: shrink the trash
-        trash.transform.localPosition = Random.insideUnitSphere * 0.3f; // Random position inside container
+        //// Disable physics and collision
+        //trashRb.isKinematic = true;
+        //trashCollider.enabled = false;
 
-        collectedTrash.Add(trash);
+        //// Store the trash in the container
+        //trash.transform.SetParent(collectionContainer);
+        //trash.transform.localScale *= 0.5f; // Optional: shrink the trash
+        //trash.transform.localPosition = Random.insideUnitSphere * 0.3f; // Random position inside container
+
+        //collectedTrash.Add(trash);
 
         // Optional: Play collection effect/sound
         PlayCollectionEffect(trash.transform.position);

@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4674925051146649912}
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfe64e4e06f6c944a8e36036d77168ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectionRadius: 0.1
+  collectionRadius: 0.2
   lifetime: 5
   trashLayer:
     serializedVersion: 2
@@ -55,7 +55,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   pullForce: 50
-  collectionSpeed: 1
+  collectionSpeed: 5
   collectionEffect: {fileID: 0}
   trailEffect: {fileID: 0}
   collectionSound: {fileID: 0}
@@ -188,7 +188,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
