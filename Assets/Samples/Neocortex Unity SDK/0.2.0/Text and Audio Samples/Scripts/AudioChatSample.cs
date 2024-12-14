@@ -59,7 +59,7 @@ namespace Neocortex.Samples
                         TriggerTakeTrashAnimation();
                         break;
 
-                    // Yeni aksiyonlar için ek case'ler ekleyebilirsiniz
+             
                     default:
                         Debug.Log($"Unknown action: {action}");
                         break;
