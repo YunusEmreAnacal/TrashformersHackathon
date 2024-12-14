@@ -345,6 +345,19 @@ MonoBehaviour:
   defaultTipMaterial: {fileID: 2100000, guid: 58b3eab777a00e84a8b6d711a70dbf52, type: 2}
   activeTipMaterial: {fileID: 2100000, guid: f2a0f3aa2b1c96440bd5504c129c6aaa, type: 2}
   tipRenderer: {fileID: 0}
+  dropAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Drop
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 084f30a9-f512-40c2-b78d-f9a1b6ec40c8
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  cooldownDuration: 1
 --- !u!1 &7136419175548555277
 GameObject:
   m_ObjectHideFlags: 0
