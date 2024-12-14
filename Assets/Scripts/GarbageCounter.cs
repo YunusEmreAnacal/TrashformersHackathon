@@ -4,6 +4,7 @@ using TMPro;
 public class GarbageCounter : MonoBehaviour
 {
     public TextMeshProUGUI garbageText; // TextMeshPro metin objesini buraya atayýn
+    public TextMeshProUGUI goldCount;
     public Terrain terrain;            // Terrain objesini buraya atayýn
 
     void Update()
@@ -17,6 +18,8 @@ public class GarbageCounter : MonoBehaviour
         // Terrain üzerinde "garbage" tagine sahip objeleri say
         GameObject[] garbageObjects = GameObject.FindGameObjectsWithTag("Garbage");
         int garbageCount = 0;
+        GameObject[] garbageObjectsAI = GameObject.FindGameObjectsWithTag("GarbageAI");
+        int garbageAICount = 0;
 
         foreach (GameObject obj in garbageObjects)
         {
@@ -25,9 +28,16 @@ public class GarbageCounter : MonoBehaviour
                 garbageCount++;
             }
         }
-
+        foreach (GameObject obj in garbageObjectsAI)
+        {
+            if (IsOnTerrain(obj))
+            {
+                garbageAICount++;
+            }
+        }
         // TextMeshPro metnine yaz
-        garbageText.text = "Çöp Sayýsý: " + garbageCount;
+        garbageText.text = "Çöp Sayýsý: " + garbageCount + "\nNPC Sayýsý: " + garbageAICount;
+        goldCount.text = "10";
     }
 
     // Bir objenin belirtilen Terrain üzerinde olup olmadýðýný kontrol eder
