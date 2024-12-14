@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 public class TrashDestroy : MonoBehaviour
 {
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Trash"))
@@ -31,6 +32,8 @@ public class TrashDestroy : MonoBehaviour
         // Son durumda boyutu sýfýrla
 
         // Nesneyi yok et
+        
+
         Destroy(trashObject);
     }
 }

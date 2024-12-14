@@ -6,5 +6,6 @@ public class TrashDestroyed : MonoBehaviour
     private void OnDestroy()
     {
         PlayerStats.Instance.GetCoins(amount);
+        PlayerStats.Instance.CollectTrash();
     }
 }

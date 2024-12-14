@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlayerStats : MonoBehaviour
     public int collectedTrash;
 
     public Action<int> OnGetCoins;
+    public Action<int> OnCollectTrash;
 
     private void Awake()
     {
@@ -22,6 +24,11 @@ public class PlayerStats : MonoBehaviour
             Destroy(Instance.gameObject);
             Instance = this;
         }
+    }
+
+    private void Start()
+    {
+        collectedTrash = 0;
     }
 
     public bool CheckCanPay(int amount)
@@ -43,5 +50,15 @@ public class PlayerStats : MonoBehaviour
     public void SpendCoins(int amount)
     {
         coins -= amount;
+    }
+
+    public void CollectTrash()
+    {
+        Debug.Log("COLLECTING TRASH");
+
+        collectedTrash++;
+        OnCollectTrash?.Invoke(collectedTrash);
+
+        if (collectedTrash >= totalTrash) { SceneManager.LoadScene("StartScene"); }
     }
 }
