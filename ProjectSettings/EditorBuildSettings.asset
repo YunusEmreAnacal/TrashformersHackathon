@@ -8,8 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Beach.unity
+    guid: 4102dea114b0860479c3725d7dd6a357
+  - enabled: 1
+    path: Assets/Scenes/City.unity
+    guid: ab7df048f72d66f4d921f7e4ea80ea2d
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c4671893a51afb84b9f56cae412bfd40,
       type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 192f0ab4bdddede479b9b052c66d48d3,
       type: 2}
+  m_UseUCBPForAssetBundles: 0
