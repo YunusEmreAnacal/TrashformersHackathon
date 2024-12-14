@@ -55,7 +55,7 @@ public class ShopManager : MonoBehaviour
         // Butonu devre dýþý býrak
         purchaseButtons[index].interactable = false;
 
-        FindObjectsByType<BagSystem>(FindObjectsSortMode.None);
+        FindAnyObjectByType<BagSystem>().UnlockModel(index);
 
         // Tool'u oyuncunun önüne spawnla
         Instantiate(item.toolPrefab, toolSpawnPoint.position, Quaternion.identity);
