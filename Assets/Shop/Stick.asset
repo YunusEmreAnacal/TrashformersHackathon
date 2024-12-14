@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toolName: Stick
   price: 10
-  toolPrefab: {fileID: 3903543788143679435, guid: bb290a6783ee1074fa6f61f914f4804b,
+  toolPrefab: {fileID: 1484286527171404739, guid: 6fbcc5a7fc9722f49822780101a35eeb,
     type: 3}

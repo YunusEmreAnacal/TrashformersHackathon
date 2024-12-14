@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toolName: Vacuum
   price: 50
-  toolPrefab: {fileID: 887144012762529435, guid: d7f00a6838666ae45bc5bab7b40110fc,
+  toolPrefab: {fileID: 7115787398536475864, guid: f66b7476462f7074c855505e2dfb6285,
     type: 3}

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toolName: Laser Gun
   price: 100
-  toolPrefab: {fileID: 6409423645887914856, guid: b4ef510448e7eb042ae1546cbbbb5bb9,
+  toolPrefab: {fileID: 4833534224005242743, guid: 10e68cdf9a5958448bd1131dc57bcda2,
     type: 3}
