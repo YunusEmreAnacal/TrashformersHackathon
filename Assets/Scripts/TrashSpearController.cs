@@ -1,6 +1,8 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using System.Collections;
 
 public class TrashSpearController : MonoBehaviour
 {
@@ -15,11 +17,18 @@ public class TrashSpearController : MonoBehaviour
     [SerializeField] private Material activeTipMaterial;
     [SerializeField] private MeshRenderer tipRenderer;
 
+    [Header("Input Settings")]
+    [SerializeField] private InputActionProperty dropAction;
+
+    [Header("Cooldown Settings")]
+    [SerializeField] private float cooldownDuration = 1f; // Time in seconds before can collect again
+
     private GameObject attachedTrash;
     private Rigidbody attachedTrashRb;
     private Collider attachedTrashCollider;
     private Vector3 attachPoint;
     private bool isGrabbed = false;
+    private bool isInCooldown = false;
 
     private void Start()
     {
@@ -33,16 +42,17 @@ public class TrashSpearController : MonoBehaviour
         // Initialize tip material
         if (tipRenderer != null)
             tipRenderer.material = defaultTipMaterial;
+
+        dropAction.action.started += (args) => ReleaseTrash();
     }
 
     private void Update()
     {
-        if (!isGrabbed || attachedTrash != null)
+        if (!isGrabbed || attachedTrash != null || isInCooldown)
             return;
 
         // Check for trash objects near the tip
         Collider[] nearbyColliders = Physics.OverlapSphere(spearTip.position, attachRadius, trashLayer);
-
         if (nearbyColliders.Length > 0)
         {
             Debug.Log("Trash is collected!!!");
@@ -100,6 +110,32 @@ public class TrashSpearController : MonoBehaviour
         // Visual feedback
         if (tipRenderer != null)
             tipRenderer.material = defaultTipMaterial;
+
+        // Start cooldown
+        StartCoroutine(StartCooldown());
+    }
+
+    private IEnumerator StartCooldown()
+    {
+        isInCooldown = true;
+
+        // Optional: Visual feedback for cooldown
+        if (tipRenderer != null)
+        {
+            // You could create a specific cooldown material or modify the default material
+            Color originalColor = tipRenderer.material.color;
+            tipRenderer.material.color = Color.gray; // Or any color to indicate cooldown
+
+            yield return new WaitForSeconds(cooldownDuration);
+
+            tipRenderer.material.color = originalColor;
+        }
+        else
+        {
+            yield return new WaitForSeconds(cooldownDuration);
+        }
+
+        isInCooldown = false;
     }
 
     private void OnGrab(SelectEnterEventArgs args)

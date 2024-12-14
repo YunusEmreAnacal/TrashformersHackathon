@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
 public class VacuumCleanerController : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class VacuumCleanerController : MonoBehaviour
     [Header("Collection Settings")]
     [SerializeField] private int maxCollectedItems = 10;
     [SerializeField] private Transform collectionContainer;
+
+    [Header("Input Settings")]
+    [SerializeField] private InputActionProperty vacuumAction;
 
     private bool isVacuuming = false;
     private bool isGrabbed = false;
@@ -48,10 +52,13 @@ public class VacuumCleanerController : MonoBehaviour
             container.transform.SetParent(transform);
             collectionContainer = container.transform;
         }
+
+        grabInteractable.selectEntered.AddListener((args) => vacuumAction.action.started += context => StartVacuuming());
+        grabInteractable.selectEntered.AddListener((args) => vacuumAction.action.canceled += context => StopVacuuming());
     }
 
     private void Update()
-    {
+    {      
         if (!isGrabbed || !isVacuuming)
             return;
 
@@ -59,7 +66,7 @@ public class VacuumCleanerController : MonoBehaviour
         Collider[] nearbyTrash = Physics.OverlapSphere(suctionPoint.position, suctionRadius, trashLayer);
 
         foreach (Collider trash in nearbyTrash)
-        {
+        {          
             Rigidbody trashRb = trash.GetComponent<Rigidbody>();
 
             if (trashRb != null && !collectedTrash.Contains(trash.gameObject))
