@@ -1,8 +1,8 @@
 using UnityEngine;
 using System.Collections;
+
 public class TrashDestroy : MonoBehaviour
 {
-
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Trash"))
@@ -20,6 +20,13 @@ public class TrashDestroy : MonoBehaviour
 
         float elapsedTime = 0f;
 
+        // AudioSource bileþenini al
+        AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+        if (audioSource != null)
+        {
+            audioSource.Play(); // Ses çalmaya baþla
+        }
+
         while (elapsedTime < shrinkDuration)
         {
             // Nesnenin boyutunu zamanla küçült
@@ -29,11 +36,13 @@ public class TrashDestroy : MonoBehaviour
             yield return null; // Bir sonraki frame'e kadar bekle
         }
 
-        // Son durumda boyutu sýfýrla
+        // AudioSource çalmayý durdur
+        if (audioSource != null)
+        {
+            audioSource.Stop();
+        }
 
         // Nesneyi yok et
-        
-
         Destroy(trashObject);
     }
 }
