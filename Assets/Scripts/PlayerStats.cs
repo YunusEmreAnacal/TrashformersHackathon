@@ -59,6 +59,6 @@ public class PlayerStats : MonoBehaviour
         collectedTrash++;
         OnCollectTrash?.Invoke(collectedTrash);
 
-        if (collectedTrash >= totalTrash) { SceneManager.LoadScene("StartScene"); }
+        if (collectedTrash >= totalTrash) { SceneManager.LoadScene("FinishScene"); }
     }
 }

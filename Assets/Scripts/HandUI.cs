@@ -12,6 +12,7 @@ public class HandUI : MonoBehaviour
         PlayerStats.Instance.OnCollectTrash += OnCollectTrash;
 
         trashTmp.SetText($"{0}/{PlayerStats.Instance.totalTrash}");
+        tmp.SetText($"{PlayerStats.Instance.coins}");
     }
 
     private void OnGetCoins(int val)

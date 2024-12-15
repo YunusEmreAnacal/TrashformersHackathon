@@ -6758,7 +6758,7 @@ PrefabInstance:
     - target: {fileID: 1714162256207508251, guid: 53a6b21b88455f1449cd575e8e1a9e38,
         type: 3}
       propertyPath: 'modelLocks.Array.data[1]'
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1714162256207508251, guid: 53a6b21b88455f1449cd575e8e1a9e38,
         type: 3}
@@ -6843,7 +6843,7 @@ PrefabInstance:
     - target: {fileID: 8246563539682930591, guid: 53a6b21b88455f1449cd575e8e1a9e38,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -82.97322
+      value: -100.95
       objectReference: {fileID: 0}
     - target: {fileID: 8246563539682930591, guid: 53a6b21b88455f1449cd575e8e1a9e38,
         type: 3}
@@ -6853,27 +6853,27 @@ PrefabInstance:
     - target: {fileID: 8246563539682930591, guid: 53a6b21b88455f1449cd575e8e1a9e38,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.749344
+      value: 37.03
       objectReference: {fileID: 0}
     - target: {fileID: 8246563539682930591, guid: 53a6b21b88455f1449cd575e8e1a9e38,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.8993379
       objectReference: {fileID: 0}
     - target: {fileID: 8246563539682930591, guid: 53a6b21b88455f1449cd575e8e1a9e38,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8246563539682930591, guid: 53a6b21b88455f1449cd575e8e1a9e38,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.4372543
       objectReference: {fileID: 0}
     - target: {fileID: 8246563539682930591, guid: 53a6b21b88455f1449cd575e8e1a9e38,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8246563539682930591, guid: 53a6b21b88455f1449cd575e8e1a9e38,
         type: 3}
@@ -6883,7 +6883,7 @@ PrefabInstance:
     - target: {fileID: 8246563539682930591, guid: 53a6b21b88455f1449cd575e8e1a9e38,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 51.858
       objectReference: {fileID: 0}
     - target: {fileID: 8246563539682930591, guid: 53a6b21b88455f1449cd575e8e1a9e38,
         type: 3}
@@ -7688,7 +7688,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -8827,7 +8827,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -16108,7 +16108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca7981d1dfb97a4d90e2c58c96feb4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 10000
+  coins: 5
   totalTrash: 7
   collectedTrash: 0
 --- !u!1 &910378103
@@ -20824,7 +20824,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -30344,7 +30344,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -35211,7 +35211,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -37090,7 +37090,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -37542,7 +37542,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -49159,7 +49159,7 @@ RectTransform:
   m_GameObject: {fileID: 4434552121088399501}
   m_LocalRotation: {x: -0, y: 0.039090935, z: -0, w: 0.9992357}
   m_LocalPosition: {x: 0, y: 0, z: -49.7}
-  m_LocalScale: {x: 0.47257784, y: 0.47257784, z: 0.47257784}
+  m_LocalScale: {x: -0.4725778, y: 0.47257784, z: 0.47257784}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8737596131252293529}
@@ -59659,7 +59659,7 @@ RectTransform:
   m_GameObject: {fileID: 5976079436525200361}
   m_LocalRotation: {x: -0, y: 0.013124734, z: -0, w: 0.99991393}
   m_LocalPosition: {x: 0, y: 0, z: -118}
-  m_LocalScale: {x: 0.5690488, y: 0.5690488, z: 0.5690488}
+  m_LocalScale: {x: -0.5690488, y: 0.5690488, z: 0.5690488}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1246992459238838517}
