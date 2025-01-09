@@ -1,4 +1,6 @@
 Trashformers: Hackathon Projesi
+
+
 📜 Hakkında
 Trashformers, çevre bilincini artırmayı hedefleyen, oyunlaştırılmış bir geri dönüşüm simülasyonudur. Bu proje, hackathon sırasında geliştirilmiştir ve oyuncuların hem eğlenmesini hem de geri dönüşüm konusunda bilinçlenmesini amaçlamaktadır.
 
