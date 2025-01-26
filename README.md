@@ -33,7 +33,7 @@ This game is a **prototype** built in **just 2 day** during the **XRHackathon 20
 ## 🌟 Team and Credits
 
 - **Project Lead**: [-]  
-- **Programmer**: [Yunus Emre ANACAL - Tunahan DERVIS- Ozan Ipekten]  
+- **Programmer**: [Yunus Emre ANACAL - Tunahan DERVIS- Ozan IPEKTEN]  
 - **Designer**: [Emircan ALIS]  
 - **Sound and Music**: [All Team]
 
