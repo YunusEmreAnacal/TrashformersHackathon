@@ -7,9 +7,10 @@
 In the game, players earn points by correctly placing various recyclable waste into the proper containers. The player's right decisions help optimize their environmental impact, promoting awareness for a sustainable world.
 
 🎮 Gameplay and Trailer  
-Gameplay Video: [![Gameplay](https://img.youtube.com/vi/-kHYBh5LQ_g/0.jpg)](https://www.youtube.com/watch?v=-kHYBh5LQ_g)  
+[![Gameplay](https://img.youtube.com/vi/-kHYBh5LQ_g/0.jpg)](https://www.youtube.com/watch?v=-kHYBh5LQ_g)  
+
 ---
-Trailer: [![Trailer](https://img.youtube.com/vi/3FhAPeJFO28/0.jpg)](https://www.youtube.com/shorts/3FhAPeJFO28)
+[![Trailer](https://img.youtube.com/vi/3FhAPeJFO28/0.jpg)](https://www.youtube.com/shorts/3FhAPeJFO28)
 
 ---
 
